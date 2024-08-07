@@ -22,7 +22,7 @@ const Sidenav = () => {
     <Stack
       justifyContent="space-between"
       boxShadow="lg"
-      maxW="256px"
+      w="256px"
       height="100vh"
     >
       <Box>

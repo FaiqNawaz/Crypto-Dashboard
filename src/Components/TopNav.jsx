@@ -9,23 +9,26 @@ import {
   Button,
   HStack,
   Box,
+  Icon,
 } from "@chakra-ui/react";
 import React from "react";
+import { HiOutlineUserCircle } from "react-icons/hi";
 
-const TopNav = () => {
+const TopNav = ({ title }) => {
   return (
-    <Box boxShadow="xl">
-      <HStack h="16" justify="space-between" maxW="960px" mx="auto">
-        <Heading>Dashboard</Heading>
+    <Box>
+      <HStack h="16" justify="space-between" maxW="70rem" mx="auto">
+        <Heading fontWeight="medium" fontSize="28px">
+          {title}
+        </Heading>
 
         <Menu>
-          <MenuButton as={Button}>Actions</MenuButton>
+          <MenuButton>
+            <Icon as={HiOutlineUserCircle} fontSize="28px" />
+          </MenuButton>
           <MenuList>
-            <MenuItem>Download</MenuItem>
-            <MenuItem>Create a Copy</MenuItem>
-            <MenuItem>Mark as Draft</MenuItem>
-            <MenuItem>Delete</MenuItem>
-            <MenuItem>Attend a Workshop</MenuItem>
+            <MenuItem>Support</MenuItem>
+            <MenuItem>Log Out</MenuItem>
           </MenuList>
         </Menu>
       </HStack>
