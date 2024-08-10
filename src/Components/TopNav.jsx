@@ -17,7 +17,7 @@ import { IoMdMenu } from "react-icons/io";
 
 const TopNav = ({ title, onOpen }) => {
   return (
-    <Box px="4">
+    <Box px="4" bg="white">
       <HStack h="16" justify="space-between" maxW="70rem" mx="auto">
         <Icon
           as={IoMdMenu}

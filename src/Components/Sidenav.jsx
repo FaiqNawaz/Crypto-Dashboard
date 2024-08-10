@@ -24,6 +24,7 @@ const Sidenav = () => {
       boxShadow={{ base: "none", lg: "lg" }}
       w={{ base: "full", lg: "256px" }}
       height="100vh"
+      bg="white"
     >
       <Box>
         <Heading fontSize="20px" as="h1" pt="56px" textAlign="center">
