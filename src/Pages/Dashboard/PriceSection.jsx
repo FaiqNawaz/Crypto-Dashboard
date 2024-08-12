@@ -1,0 +1,62 @@
+import React from "react";
+import { CustomCard } from "../../assets/Chakra/CustomCard";
+import {
+  Stack,
+  HStack,
+  Tag,
+  Text,
+  Icon,
+  Button,
+  Flex,
+  Image,
+} from "@chakra-ui/react";
+import { CgArrowTopRight } from "react-icons/cg";
+import { FaPlusCircle } from "react-icons/fa";
+import { FaMinusCircle } from "react-icons/fa";
+
+const PriceSection = () => {
+  const timestamps = ["7:55 PM", "8:55 PM", "9:55 PM", "10:55 PM", "11:55 PM"];
+
+  return (
+    <CustomCard>
+      <Flex justify="space-between" align="start">
+        <Stack>
+          <HStack color="black.80">
+            <Text fontSize="sm">Wallet Balance</Text>
+          </HStack>
+          <HStack
+            spacing={2}
+            flexDir={{ base: "column", sm: "row" }}
+            align={{ base: "flex-start", sm: "center" }}
+          >
+            <Text textStyle="h2" fontWeight="medium">
+              22.39401000
+            </Text>{" "}
+            <HStack fontWeight="medium" color="green.500">
+              <Icon as={CgArrowTopRight} />
+              <Text fontSize="sm" fontWeight="medium">
+                22%
+              </Text>{" "}
+            </HStack>
+          </HStack>
+        </Stack>
+        <HStack>
+          <Button leftIcon={<Icon as={FaPlusCircle} />}>Buy</Button>
+          <Button leftIcon={<Icon as={FaMinusCircle} />}>Sell</Button>
+        </HStack>
+      </Flex>
+
+      <Image src="\Graph.png" mt="48px" />
+
+      <HStack justify="space-between">
+        {timestamps.map((timestamps) => (
+          <Text key={timestamps} fontSize="sm" color="black.80">
+            {timestamps}
+          </Text>
+        ))}
+      </HStack>
+    </CustomCard>
+  );
+};
+
+export default PriceSection;
