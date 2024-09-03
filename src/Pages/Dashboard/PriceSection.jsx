@@ -51,11 +51,20 @@ const PriceSection = () => {
         </HStack>
       </Flex>
 
-      <Tabs variant="soft-rounded" colorScheme="green">
+      <Tabs variant="soft-rounded">
         <Flex justify="end">
-          <TabList>
-            <Tab>Tab 1</Tab>
-            <Tab>Tab 2</Tab>
+          <TabList bg="black.5" p="3px">
+            {["1H", "1D", "1W", "1M"].map((tab) => (
+              <Tab
+                bg="white"
+                key={tab}
+                fontSize="sm"
+                p="6px"
+                borderRadius="4px"
+              >
+                {tab}
+              </Tab>
+            ))}
           </TabList>
         </Flex>
 
