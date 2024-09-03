@@ -9,6 +9,11 @@ import {
   Button,
   Flex,
   Image,
+  Tabs,
+  TabList,
+  Tab,
+  TabPanels,
+  TabPanel,
 } from "@chakra-ui/react";
 import { CgArrowTopRight } from "react-icons/cg";
 import { FaPlusCircle } from "react-icons/fa";
@@ -46,15 +51,31 @@ const PriceSection = () => {
         </HStack>
       </Flex>
 
-      <Image src="\Graph.png" mt="48px" />
+      <Tabs variant="soft-rounded" colorScheme="green">
+        <Flex justify="end">
+          <TabList>
+            <Tab>Tab 1</Tab>
+            <Tab>Tab 2</Tab>
+          </TabList>
+        </Flex>
 
-      <HStack justify="space-between">
-        {timestamps.map((timestamps) => (
-          <Text key={timestamps} fontSize="sm" color="black.80">
-            {timestamps}
-          </Text>
-        ))}
-      </HStack>
+        <TabPanels>
+          <TabPanel>
+            <Image src="\Graph.png" mt="48px" />
+
+            <HStack justify="space-between">
+              {timestamps.map((timestamps) => (
+                <Text key={timestamps} fontSize="sm" color="black.80">
+                  {timestamps}
+                </Text>
+              ))}
+            </HStack>
+          </TabPanel>
+          <TabPanel>
+            <p>two!</p>
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
     </CustomCard>
   );
 };
