@@ -16,7 +16,13 @@ const DashboardLayout = ({ title, children }) => {
 
       <Box flexGrow={1}>
         <TopNav title={title} onOpen={onOpen} />
-        <Container maxW="70rem" mt="6">
+        <Container
+          overflowX="hidden"
+          overflowY="auto"
+          h="calc(100vh - 88px)"
+          maxW="70rem"
+          mt="6"
+        >
           {children}
         </Container>
       </Box>
