@@ -14,6 +14,7 @@ export const theme = extendTheme(
       p: {
         purple: "#5F00D9",
         black: "#171717",
+        green: "#00563b",
       },
       black: {
         5: "#F3F3F7",
