@@ -19,10 +19,10 @@ const TransactionTable = () => {
       date: "2023-06-20",
       time: "07:00 AM",
       type: {
-        name: "INR Deposit",
+        name: "PKR Deposit",
         tag: "E-Transfer",
       },
-      amount: "+₹81,123",
+      amount: "+81,123",
       status: "pending",
     },
     {
@@ -30,10 +30,10 @@ const TransactionTable = () => {
       date: "2023-06-18",
       time: "07:00 AM",
       type: {
-        name: "INR Widthdraw",
+        name: "PKR Widthdraw",
         tag: "Wire Transfer",
       },
-      amount: "-₹55,123",
+      amount: "-55,123",
       status: "processing",
     },
     {
