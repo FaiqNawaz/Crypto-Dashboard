@@ -1,9 +1,4 @@
-import {
-  Button,
-  extendTheme,
-  Heading,
-  withDefaultColorScheme,
-} from "@chakra-ui/react";
+import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
 
 export const theme = extendTheme(
   {
@@ -14,7 +9,6 @@ export const theme = extendTheme(
       p: {
         purple: "#5F00D9",
         black: "#171717",
-        green: "#00563b",
       },
       black: {
         5: "#F3F3F7",
@@ -25,7 +19,10 @@ export const theme = extendTheme(
         80: "#535D66",
       },
     },
-
+    fonts: {
+      heading: `Ubuntu`,
+      body: "Ubuntu",
+    },
     textStyles: {
       h1: {
         fontSize: {
@@ -87,15 +84,6 @@ export const theme = extendTheme(
       },
     },
 
-    components: {
-      Button: {
-        baseStyle: {
-          fontWeight: "bold",
-          borderRadius: "10px",
-        },
-      },
-    },
-
     fontSizes: {
       xs: "12px",
       sm: "14px",
@@ -106,16 +94,53 @@ export const theme = extendTheme(
       "3xl": { base: "24px", md: "28px" },
       "4xl": { base: "30px", md: "32px" },
     },
-
-    fonts: {
-      heading: "Ubuntu",
-      body: "Ubuntu",
-    },
-
     styles: {
       global: {
+        // styles for the `body`
         body: {
           bg: "#F3F3F7",
+        },
+      },
+    },
+
+    components: {
+      Button: {
+        baseStyle: {
+          fontWeight: "bold",
+          borderRadius: "10px",
+        },
+      },
+      FormLabel: {
+        baseStyle: {
+          fontSize: "sm",
+        },
+      },
+      Input: {
+        variants: {
+          outline: {
+            field: {
+              h: "38px",
+              borderRadius: "8px",
+              fontSize: "sm",
+              pb: "0",
+              _focus: {
+                boxShadow: "0 0 0 1px #5F00D9",
+              },
+            },
+          },
+        },
+      },
+      Textarea: {
+        variants: {
+          outline: {
+            h: "38px",
+            borderRadius: "8px",
+            fontSize: "sm",
+
+            _focus: {
+              boxShadow: "0 0 0 1px #5F00D9",
+            },
+          },
         },
       },
     },
